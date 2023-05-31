@@ -76,6 +76,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
+    image-rendering: optimizeQuality;
     background-position: center!important;
     background-size: cover!important;
     transition: .4s;
@@ -88,4 +89,5 @@ body {
     transform: translateX(-50%);
     font-size: 0.8rem;
     white-space: nowrap;
+    text-shadow: 0 0 5px black;
 }
