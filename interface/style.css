@@ -52,6 +52,8 @@ body {
     grid-template-rows: repeat(2, 1fr);
     width: 90%;
     height: 100%;
+    gap: 5px;
+    padding: 5px;
 }
 
 .filme {
@@ -60,10 +62,12 @@ body {
     height: 100%;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .filme:hover > .capa {
     scale: 1.1;
+    opacity: .7;
 }
 
 .filme > .capa {
@@ -72,9 +76,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://th.bing.com/th/id/R.96caf69b73136bf8cd178f84dae0e4e5?rik=Y2dsujktW2W9QQ&pid=ImgRaw&r=0");
-    background-position: center;
-    background-size: cover;
+    background-position: center!important;
+    background-size: cover!important;
     transition: .4s;
 }
 
