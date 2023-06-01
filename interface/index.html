@@ -17,9 +17,46 @@
             <li id="terror">Terror</li>
             <li id="outros">Outros</li>
         </ul>
+
+        <button id="btn_novo">+</button>
     </aside>
 
     <main id="filmes"></main>
+
+    <div id="modal-background" class="hidden"></div>
+    <div id="modal" class="hidden">
+        <div>
+            <label for="filme_nome">Nome do Filme</label> <br/>
+            <input id="filme_nome" name="filme_nome" type="text"> <br/>
+        </div>
+
+        <div>
+            <label for="filme_lancamento">Ano de Lançamento</label> <br/>
+            <input id="filme_lancamento" name="filme_lancamento" type="number" value="2023"> <br/>
+        </div>
+
+        <div>
+            <label for="filme_capa">Imagem de Capa(URL)</label> <br/>
+            <textarea id="filme_capa" name="filme_capa" rows="3" maxlength="255"></textarea>
+        </div>
+
+        <div>
+            <select id="filme_genero" name="filme_genero">
+                <option value="acao">Ação</option>
+                <option value="comedia">Comédia</option>
+                <option value="romance">Romance</option>
+                <option value="terror">Terror</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+        <span id="input_erro">Há um erro no texto acima</span>
+        <div>
+            <button id="btn_salvar">Salvar</button>
+            <button id="btn_excluir">Excluir</button>
+            <button id="btn_cancelar">Cancelar</button>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>

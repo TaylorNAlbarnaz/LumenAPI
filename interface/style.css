@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #f5f5f1;
@@ -16,8 +17,12 @@ body {
 }
 
 #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 10%;
     height: 100%;
+    min-width: 120px;
     background: linear-gradient(180deg, #ED213A 0%, #93291E 140%);
 }
 
@@ -87,7 +92,70 @@ body {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     white-space: nowrap;
     text-shadow: 0 0 5px black;
+}
+
+#modal-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #221f1f;
+    opacity: .7;
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 250px;
+    padding: 15px;
+    background-color: #221f1f;
+}
+
+#modal input, textarea, select, option{
+    color: black;
+    width: 300px;
+    resize: none;
+}
+
+#modal button {
+    width: 80px;
+    height: 25px;
+}
+
+#btn_novo {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: deepskyblue;
+}
+
+#btn_salvar {
+    background-color: limegreen;
+}
+
+#btn_excluir {
+    background-color: #ce192e;
+}
+
+#btn_cancelar {
+    background-color: gray
+}
+
+#input_erro {
+    font-size: .8rem;
+    color: #ED213A;
+}
+
+.hidden {
+    display: none!important;
 }

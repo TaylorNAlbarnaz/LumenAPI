@@ -9,7 +9,7 @@ class FilmeController extends Controller
 {
     public function index()
     {
-        $filmes = Filme::take(10)->get();
+        $filmes = Filme::take(10)->orderBy('created_at', 'desc')->get();
         return response()->json($filmes);
     }
 
@@ -72,7 +72,7 @@ class FilmeController extends Controller
 
     public function showGenre($genero)
     {
-        $filmes = Filme::where('genero', $genero)->take(10)->get();
+        $filmes = Filme::where('genero', $genero)->take(10)->orderBy('created_at', 'desc')->get();
 
         return response()->json($filmes);
     }
